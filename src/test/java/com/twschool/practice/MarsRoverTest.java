@@ -212,7 +212,7 @@ public class MarsRoverTest {
         String comments = "MMMM";
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive1(comments);
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());

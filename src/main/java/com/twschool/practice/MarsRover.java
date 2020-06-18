@@ -18,64 +18,16 @@ public class MarsRover {
         return marsRoverPosition;
     }
 
+
     public MarsRoverPosition receive(String comments) {
         int x = marsRoverPosition.getX();
         int y = marsRoverPosition.getY();
         String dir = marsRoverPosition.getDirection();
-            if (comments.equals("M")) {
-                if (dir.equals("N")) {
-                    marsRoverPosition.setY(y + 1);
-                }
-                if (dir.equals("W")) {
-                    marsRoverPosition.setX(x - 1);
-                }
-                if (dir.equals("S")) {
-                    marsRoverPosition.setY(y - 1);
-                }
-                if (dir.equals("E")) {
-                    marsRoverPosition.setX(x + 1);
-                }
-            }
-
-            if (comments.equals("L")) {
-                if (dir.equals("N")) {
-                    marsRoverPosition.setDirection("W");
-                }
-                if (dir.equals("W")) {
-                    marsRoverPosition.setDirection("S");
-                }
-                if (dir.equals("S")) {
-                    marsRoverPosition.setDirection("E");
-                }
-                if (dir.equals("E")) {
-                    marsRoverPosition.setDirection("N");
-                }
-            }
-            if (comments.equals("R")) {
-                if (dir.equals("N")) {
-                    marsRoverPosition.setDirection("E");
-                }
-                if (dir.equals("W")) {
-                    marsRoverPosition.setDirection("N");
-                }
-                if (dir.equals("S")) {
-                    marsRoverPosition.setDirection("W");
-                }
-                if (dir.equals("E")) {
-                    marsRoverPosition.setDirection("S");
-                }
-            }
-
-        return marsRoverPosition;
-    }
-
-    public MarsRoverPosition receive1(String comments) {
-        int x = marsRoverPosition.getX();
-        int y = marsRoverPosition.getY();
-        String dir = marsRoverPosition.getDirection();
+        System.out.println(dir);
         List<Character> commandList = Arrays.asList(ArrayUtils.toObject(comments.toCharArray()));
         for(Character singleCommand : commandList) {
             String com = singleCommand.toString();
+            System.out.println(com);
 
             if (com.equals("M")) {
                 if (dir.equals("N")) {
@@ -94,36 +46,35 @@ public class MarsRover {
 
             if (com.equals("L")) {
                 if (dir.equals("N")) {
-                    dir = "W";
+                    marsRoverPosition.setDirection("W");
                 }
                 if (dir.equals("W")) {
-                    dir = "S";
+                    marsRoverPosition.setDirection("S");
                 }
                 if (dir.equals("S")) {
-                    dir = "E";
+                    marsRoverPosition.setDirection("E");
                 }
                 if (dir.equals("E")) {
-                    dir = "N";
+                    marsRoverPosition.setDirection("N");
                 }
             }
             if (com.equals("R")) {
                 if (dir.equals("N")) {
-                    dir = "E";
+                    marsRoverPosition.setDirection("E");
                 }
                 if (dir.equals("W")) {
-                    dir = "N";
+                    marsRoverPosition.setDirection("N");
                 }
                 if (dir.equals("S")) {
-                    dir = "W";
+                    marsRoverPosition.setDirection("W");
                 }
                 if (dir.equals("E")) {
-                    dir = "S";
+                    marsRoverPosition.setDirection("S");
                 }
             }
         }
         marsRoverPosition.setY(y);
         marsRoverPosition.setX(x);
-        marsRoverPosition.setDirection(dir);
         return marsRoverPosition;
     }
 }
