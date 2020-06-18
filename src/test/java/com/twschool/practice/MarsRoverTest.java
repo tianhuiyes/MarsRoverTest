@@ -14,10 +14,11 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"N");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"L"};
 
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("L");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -30,10 +31,11 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"N");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"M"};
 
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("M");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -46,10 +48,11 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"N");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"R"};
 
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("R");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -62,9 +65,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"W");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"M"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("M");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(-1,marsRoverPosition.getX());
@@ -77,9 +81,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"W");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"L"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("L");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -92,9 +97,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"W");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"R"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("R");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -107,9 +113,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"S");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"M"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("M");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -122,9 +129,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"S");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"L"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("L");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -137,9 +145,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"S");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"R"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("R");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -152,9 +161,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"E");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"M"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("M");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(1,marsRoverPosition.getX());
@@ -167,9 +177,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"E");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"L"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("L");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
@@ -182,9 +193,10 @@ public class MarsRoverTest {
         //given
         MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"E");
         MarsRover marsRover = new MarsRover(initPosition);
+        String[] comments = {"R"};
 
         //when
-        MarsRoverPosition marsRoverPosition = marsRover.receive("R");
+        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
 
         //then
         Assert.assertEquals(0,marsRoverPosition.getX());
