@@ -1,11 +1,13 @@
 package com.twschool.practice;
 
+import static com.twschool.practice.Direction.*;
+
 public class MarsRoverPosition {
     private int x;
     private int y;
-    private String direction;
+    private Direction direction;
 
-    public MarsRoverPosition(int x, int y, String direction) {
+    public MarsRoverPosition(int x, int y, Direction direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
@@ -27,57 +29,35 @@ public class MarsRoverPosition {
         this.y = y;
     }
 
-    public String getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 
-    public void setDirection(String direction) {
+    public void setDirection(Direction direction) {
         this.direction = direction;
     }
 
-
     public void move() {
-        if (getDirection().equals("N")) {
+        if (direction.equals(N)) {
             y++;
         }
-        if (getDirection().equals("W")) {
+        if (direction.equals(W)) {
             x--;
         }
-        if (getDirection().equals("S")) {
+        if (direction.equals(S)) {
             y--;
         }
-        if (getDirection().equals("E")) {
+        if (direction.equals(E)) {
             x++;
         }
     }
 
+
     public void turnLeft() {
-        if (this.getDirection().equals("N")) {
-            setDirection("W");
-        }
-        else if (getDirection().equals("W")) {
-            setDirection("S");
-        }
-        else if (getDirection().equals("S")) {
-            setDirection("E");
-        }
-        else if (getDirection().equals("E")) {
-            setDirection("N");
-        }
+        direction = direction.turnLeft();
     }
 
     public void turnRight() {
-        if (getDirection().equals("N")) {
-            setDirection("E");
-        }
-        else if (getDirection().equals("W")) {
-            setDirection("N");
-        }
-        else if (getDirection().equals("S")) {
-            setDirection("W");
-        }
-        else if (getDirection().equals("E")) {
-            setDirection("S");
-        }
+        direction = direction.turnRight();
     }
 }

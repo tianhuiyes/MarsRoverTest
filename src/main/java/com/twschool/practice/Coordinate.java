@@ -1,10 +1,10 @@
 package com.twschool.practice;
 
-public class ordinate {
+public class Coordinate {
     private int x;
     private int y;
 
-    public ordinate() {
+    public Coordinate() {
         this.x = x;
         this.y = y;
     }
@@ -23,5 +23,8 @@ public class ordinate {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public void execute() {
     }
 }
