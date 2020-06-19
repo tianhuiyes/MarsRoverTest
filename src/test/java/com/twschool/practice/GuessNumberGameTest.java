@@ -26,6 +26,7 @@ public class GuessNumberGameTest {
 
         //when
         GameStatus gameStatus =guessNumberGame.guess("1 2 5 6");
+        gameStatus =guessNumberGame.guess("1 2 5 6");
 
         //then
         Assert.assertEquals(GameStatus.CONTINUE,gameStatus);

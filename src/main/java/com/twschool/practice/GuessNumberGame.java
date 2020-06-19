@@ -18,11 +18,15 @@ public class GuessNumberGame {
     public GameStatus guess(String userAnswer) {
         String result = answer.check(userAnswer);
         leftGameChance--;
+        modifyStatus(result);
+        return gameStatus;
+    }
+
+    public void modifyStatus(String result) {
         if("4A0B".equals(result)) {
             gameStatus = GameStatus.SUCCEED;
         }else if(leftGameChance == 0){
             gameStatus = GameStatus.FAILED;
         }
-        return gameStatus;
     }
 }
