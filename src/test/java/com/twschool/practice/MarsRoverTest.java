@@ -219,8 +219,22 @@ public class MarsRoverTest {
         Assert.assertEquals(4,marsRoverPosition.getY());
         Assert.assertEquals("N",marsRoverPosition.getDirection());
     }
-
-
+//
+//    @Test
+//    public void should_return_fu11N_given_00N_and_command_MLMR() {
+//        //given
+//        MarsRoverPosition initPosition = new MarsRoverPosition(0,0,"N");
+//        MarsRover marsRover = new MarsRover(initPosition);
+//        String comments = "MLMR";
+//
+//        //when
+//        MarsRoverPosition marsRoverPosition = marsRover.receive(comments);
+//
+//        //then
+//        Assert.assertEquals(-1,marsRoverPosition.getX());
+//        Assert.assertEquals(1,marsRoverPosition.getY());
+//        Assert.assertEquals("N",marsRoverPosition.getDirection());
+//    }
 
 }
 

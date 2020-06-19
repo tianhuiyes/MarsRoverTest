@@ -34,4 +34,50 @@ public class MarsRoverPosition {
     public void setDirection(String direction) {
         this.direction = direction;
     }
+
+
+    public void move() {
+        if (getDirection().equals("N")) {
+            y++;
+        }
+        if (getDirection().equals("W")) {
+            x--;
+        }
+        if (getDirection().equals("S")) {
+            y--;
+        }
+        if (getDirection().equals("E")) {
+            x++;
+        }
+    }
+
+    public void turnLeft() {
+        if (this.getDirection().equals("N")) {
+            setDirection("W");
+        }
+        else if (getDirection().equals("W")) {
+            setDirection("S");
+        }
+        else if (getDirection().equals("S")) {
+            setDirection("E");
+        }
+        else if (getDirection().equals("E")) {
+            setDirection("N");
+        }
+    }
+
+    public void turnRight() {
+        if (getDirection().equals("N")) {
+            setDirection("E");
+        }
+        else if (getDirection().equals("W")) {
+            setDirection("N");
+        }
+        else if (getDirection().equals("S")) {
+            setDirection("W");
+        }
+        else if (getDirection().equals("E")) {
+            setDirection("S");
+        }
+    }
 }
