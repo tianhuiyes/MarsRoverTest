@@ -56,10 +56,34 @@ public class GuessNumberGameTest {
         UserInput userInput = new UserInput();
 
         //when
-        Boolean result = userInput.checkUserInput("1 2 3 4");
+        String result = userInput.checkUserInput("1 2 3 4");
 
         //then
-        Assert.assertEquals(true,result);
+        Assert.assertEquals("correct input",result);
+    }
+
+    @Test
+    public void should_return_incorrect_input_when_checkUserInput_given_userAnswer_length_is_not_4() {
+        //given
+        UserInput userInput = new UserInput();
+
+        //when
+        String result = userInput.checkUserInput("1 2");
+
+        //then
+        Assert.assertEquals("Wrong Input,Input again!",result);
+    }
+
+    @Test
+    public void should_return_incorrect_input_when_checkUserInput_given_userAnswer_have_repeat_number() {
+        //given
+        UserInput userInput = new UserInput();
+
+        //when
+        String result = userInput.checkUserInput("1 1 2 4");
+
+        //then
+        Assert.assertEquals("Wrong Input,Input again!",result);
     }
 
 
