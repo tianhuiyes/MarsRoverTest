@@ -50,6 +50,18 @@ public class GuessNumberGameTest {
         Assert.assertEquals(GameStatus.FAILED,gameStatus);
     }
 
+    @Test
+    public void should_return_correct_input_when_checkUserInput_given_userAnswer_1234() {
+        //given
+        UserInput userInput = new UserInput();
+
+        //when
+        Boolean result = userInput.checkUserInput("1 2 3 4");
+
+        //then
+        Assert.assertEquals(true,result);
+    }
+
 
 
 }
