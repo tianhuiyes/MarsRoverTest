@@ -32,5 +32,7 @@ public class GuessNumberGameMain {
                 break;
             }
         }
+
+        scan.close();
     }
 }

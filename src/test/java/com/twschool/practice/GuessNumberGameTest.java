@@ -49,41 +49,7 @@ public class GuessNumberGameTest {
         Assert.assertEquals(GameStatus.FAILED,gameStatus);
     }
 
-    @Test
-    public void should_return_correct_input_when_checkUserInput_given_userAnswer_1234() {
-        //given
-        UserInput userInput = new UserInput();
 
-        //when
-        String result = userInput.checkInput("1 2 3 4");
-
-        //then
-        Assert.assertEquals("correct input",result);
-    }
-
-    @Test
-    public void should_return_incorrect_input_when_checkUserInput_given_userAnswer_length_is_not_4() {
-        //given
-        UserInput userInput = new UserInput();
-
-        //when
-        String result = userInput.checkInput("2 3 5 5");
-
-        //then
-        Assert.assertEquals("Wrong Input,Input again!",result);
-    }
-
-    @Test
-    public void should_return_incorrect_input_when_checkUserInput_given_userAnswer_have_repeat_number() {
-        //given
-        UserInput userInput = new UserInput();
-
-        //when
-        String result = userInput.checkInput("1 1 2 4");
-
-        //then
-        Assert.assertEquals("Wrong Input,Input again!",result);
-    }
 
 
 
