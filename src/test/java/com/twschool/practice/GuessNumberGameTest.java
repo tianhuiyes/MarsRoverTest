@@ -26,7 +26,6 @@ public class GuessNumberGameTest {
 
         //when
         GameStatus gameStatus =guessNumberGame.guess("1 2 5 6");
-        gameStatus =guessNumberGame.guess("1 2 5 6");
 
         //then
         Assert.assertEquals(GameStatus.CONTINUE,gameStatus);
@@ -56,7 +55,7 @@ public class GuessNumberGameTest {
         UserInput userInput = new UserInput();
 
         //when
-        String result = userInput.checkUserInput("1 2 3 4");
+        String result = userInput.checkInput("1 2 3 4");
 
         //then
         Assert.assertEquals("correct input",result);
@@ -68,7 +67,7 @@ public class GuessNumberGameTest {
         UserInput userInput = new UserInput();
 
         //when
-        String result = userInput.checkUserInput("1 2");
+        String result = userInput.checkInput("2 3 5 5");
 
         //then
         Assert.assertEquals("Wrong Input,Input again!",result);
@@ -80,7 +79,7 @@ public class GuessNumberGameTest {
         UserInput userInput = new UserInput();
 
         //when
-        String result = userInput.checkUserInput("1 1 2 4");
+        String result = userInput.checkInput("1 1 2 4");
 
         //then
         Assert.assertEquals("Wrong Input,Input again!",result);

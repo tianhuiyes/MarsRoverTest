@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 public class UserInput {
-    public String checkUserInput(String userInput) {
+    public String checkInput(String userInput) {
         String result = "correct input";
         List<String> userInputNumbers = Arrays.asList(userInput.split(" "));
         Set<String> set = new HashSet<String>(userInputNumbers);

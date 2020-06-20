@@ -20,7 +20,7 @@ public class Generator {
         for(int i = 0 ;i<list.size();i++){
             gameAnswer += list.get(i)+" ";
         }
-        System.out.println(gameAnswer);
+        System.out.println("gameAnswer:"+gameAnswer);
         return gameAnswer;
     }
 
